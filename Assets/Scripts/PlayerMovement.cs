@@ -113,8 +113,8 @@ public class PlayerMovement : MonoBehaviour
         bool leftPressed = Keyboard.current[Key.A].isPressed;
         bool backwardPressed = Keyboard.current[Key.S].isPressed;
 
-        animator.SetBool(isJumpUpHash, !grounded && rb.velocity.y > 0f);
-        animator.SetBool(isJumpDownHash, !grounded && rb.velocity.y < 0f);
+        animator.SetBool(isJumpUpHash, !grounded && rb.linearVelocity.y > 0f);
+        animator.SetBool(isJumpDownHash, !grounded && rb.linearVelocity.y < 0f);
 
         if (grounded)
         {
@@ -212,7 +212,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 moveDir = forwardDir * y + rightDir * x;
         if (moveDir.sqrMagnitude > 1f) moveDir.Normalize();
 
-        Vector3 horizontalVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        Vector3 horizontalVel = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
         Vector3 desiredVel = moveDir * targetSpeed * controlMultiplier;
 
         Vector3 velocityChange = desiredVel - horizontalVel;
@@ -236,11 +236,11 @@ public class PlayerMovement : MonoBehaviour
             staminaBar.SetStamina(currentStamina);
 
         float maxVel = targetSpeed;
-        Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        Vector3 flatVel = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
         if (flatVel.magnitude > maxVel)
         {
             Vector3 limitedVel = flatVel.normalized * maxVel;
-            rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
+            rb.linearVelocity = new Vector3(limitedVel.x, rb.linearVelocity.y, limitedVel.z);
         }
     }
 
@@ -308,12 +308,12 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 FindVelRelativeToLook()
     {
         float lookAngle = orientation.eulerAngles.y;
-        float moveAngle = Mathf.Atan2(rb.velocity.x, rb.velocity.z) * Mathf.Rad2Deg;
+        float moveAngle = Mathf.Atan2(rb.linearVelocity.x, rb.linearVelocity.z) * Mathf.Rad2Deg;
 
         float u = Mathf.DeltaAngle(lookAngle, moveAngle);
         float v = 90 - u;
 
-        float magnitude = rb.velocity.magnitude;
+        float magnitude = rb.linearVelocity.magnitude;
         float yMag = magnitude * Mathf.Cos(u * Mathf.Deg2Rad);
         float xMag = magnitude * Mathf.Cos(v * Mathf.Deg2Rad);
 
