@@ -35,31 +35,31 @@ public class PauseManager : MonoBehaviour
         }
     }
 
-    public void Pause()
-    {
-        pauseMenuUI.SetActive(true);
-        isPaused = true;
-        Time.timeScale = 0f;
+   public void Pause()
+{
+    pauseMenuUI.SetActive(true);
+    isPaused = true;
+    Time.timeScale = 0f;
 
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+    foreach (var script in disableOnPause)
+        script.enabled = false;
 
-        foreach (var script in disableOnPause)
-            script.enabled = false;
-    }
+    Cursor.visible = true;
+    Cursor.lockState = CursorLockMode.None;
+}
 
-    public void Resume()
-    {
-        pauseMenuUI.SetActive(false);
-        isPaused = false;
-        Time.timeScale = 1f;
+public void Resume()
+{
+    pauseMenuUI.SetActive(false);
+    isPaused = false;
+    Time.timeScale = 1f;
 
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+    foreach (var script in disableOnPause)
+        script.enabled = true;
 
-        foreach (var script in disableOnPause)
-            script.enabled = true;
-    }
+    Cursor.visible = false;
+    Cursor.lockState = CursorLockMode.Locked;
+}
 
     public void QuitToMainMenu()
     {
