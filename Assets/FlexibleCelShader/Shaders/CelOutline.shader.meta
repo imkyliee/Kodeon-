@@ -7,3 +7,10 @@ ShaderImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112979
+  packageName: Flexible Cel Shader - Built in Pipeline
+  packageVersion: 1.0
+  assetPath: Assets/FlexibleCelShader/Shaders/CelOutline.shader
+  uploadId: 402874

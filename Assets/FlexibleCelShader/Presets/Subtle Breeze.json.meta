@@ -6,3 +6,10 @@ TextScriptImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112979
+  packageName: Flexible Cel Shader - Built in Pipeline
+  packageVersion: 1.0
+  assetPath: Assets/FlexibleCelShader/Presets/Subtle Breeze.json
+  uploadId: 402874
