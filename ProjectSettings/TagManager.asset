@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 3
   tags:
   - Pickup
-  - Climbable
   - Doors
   - DungeonExitSpawn
   - SpawnDungeon
@@ -14,6 +13,7 @@ TagManager:
   - Padlock3
   - Padlock4
   - Padlock5
+  - Ground
   layers:
   - Default
   - TransparentFX
