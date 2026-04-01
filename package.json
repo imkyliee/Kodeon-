@@ -1,0 +1,24 @@
+{
+  "name": "kodeon",
+  "version": "1.0.0",
+  "description": "Kodeon: A Unity-Based 3D Adventure Game for Learning Java Programming is to provide students with a fresh and engaging approach to studying the Fundamentals of Java by integrating educational content into an adventure-style game. The project seeks to transform the learning experience into something more approachable and enjoyable. Players engage with challenges, puzzles, and quizzes that require them to apply basic Java concepts, allowing them to practice coding in a meaningful, gamified context. This approach is intended to enhance students’ motivation and boost their self-confidence in programming.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imkyliee/Kodeon-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/imkyliee/Kodeon-/issues"
+  },
+  "homepage": "https://github.com/imkyliee/Kodeon-#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

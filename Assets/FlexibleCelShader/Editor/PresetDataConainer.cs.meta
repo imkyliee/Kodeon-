@@ -10,3 +10,10 @@ MonoImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112979
+  packageName: Flexible Cel Shader - Built in Pipeline
+  packageVersion: 1.0
+  assetPath: Assets/FlexibleCelShader/Editor/PresetDataConainer.cs
+  uploadId: 402874
