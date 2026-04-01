@@ -7,7 +7,6 @@ TagManager:
   - Pickup
   - Doors
   - DungeonExitSpawn
-  - SpawnDungeon
   - Padlock1
   - Padlock2
   - Padlock3
@@ -35,7 +34,7 @@ TagManager:
   - Chest
   - Book
   - IgnoreFlashlight
-  - 
+  - void
   - 
   - 
   - 
