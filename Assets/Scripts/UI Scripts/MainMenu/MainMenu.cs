@@ -11,39 +11,50 @@ public class MainMenu : MonoBehaviour
 
  void Awake()
     {
-        // Get all buttons in the main menu
+        // Get all buttons
         menuButtons = mainMenuUI.GetComponentsInChildren<Button>();
     }
-    public void PlayGame()
-{
-    // Disable all buttons so they can't be clicked again
-    foreach (var btn in menuButtons)
+
+    void SetButtonsInteractable(bool state)
     {
-        btn.interactable = false;
+        foreach (var btn in menuButtons)
+        {
+            btn.interactable = state;
+        }
     }
+     public void EnableButtons()
+    {
+        SetButtonsInteractable(true);
+    }
+    public void PlayGame()
+    {
+    // Disable all buttons
+     SetButtonsInteractable(false);
 
     // Trigger animations
     cameraAnimator.SetTrigger("Play");
 
-    if (doorAnimator != null)
-    {
-        doorAnimator.SetTrigger("Open");
-    }
+        if (doorAnimator != null)
+        {
+            doorAnimator.SetTrigger("Open");
+        }
 
 }
-
     public void Option()
     {
+        SetButtonsInteractable(false);
         cameraAnimator.SetTrigger("Option");
     }
 
     public void YesOrNo()
     {
+        SetButtonsInteractable(false);
         cameraAnimator.SetTrigger("Quit");
     }
 
     public void Back()
     {
+        SetButtonsInteractable(false);
         cameraAnimator.SetTrigger("Back");
         cameraAnimator.SetTrigger("Idle");
     }
