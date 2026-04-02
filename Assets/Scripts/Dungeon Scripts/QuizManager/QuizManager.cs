@@ -9,11 +9,11 @@ public class QuizManager : MonoBehaviour
     public int correctButtonIndex = 1;    // 0-3 for A-D
     public TextMeshProUGUI Checker;
 
-    public GameObject Multiple1;          // The puzzle UI panel inside PadlockQ
+    //public GameObject Multiple1;          // The puzzle UI panel inside PadlockQ
     public GameObject Padlock;             // Padlock object in the scene
     public GameObject PadlockUnlockText;   // The "Press [E] to Unlock" UI
     public MonoBehaviour PlayerMovement;   // Player movement script
-    public Multiple1 padlockScript;         // Reference to PadlockQ
+    //public Multiple1 padlockScript;         // Reference to PadlockQ
     public GameObject DoorUI;
 
     void Start()
@@ -44,8 +44,8 @@ public class QuizManager : MonoBehaviour
     public void CloseUI()
     {
         // Hide Padlock puzzle UI
-        if (Multiple1 != null)
-            Multiple1.SetActive(false);
+        /*if (Multiple1 != null)
+            Multiple1.SetActive(false);*/
 
         // Hide Padlock unlock hint
         if (PadlockUnlockText != null)
@@ -60,8 +60,8 @@ public class QuizManager : MonoBehaviour
             PlayerMovement.enabled = true;
 
         // Unlock the padlock so the door can now be interacted with
-        if (padlockScript != null)
-            padlockScript.UnlockPadlock();
+       /* if (padlockScript != null)
+            padlockScript.UnlockPadlock();*/
 
         // Show the Door UI
         if (DoorUI != null)

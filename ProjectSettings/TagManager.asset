@@ -5,14 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Pickup
-  - Doors
-  - DungeonExitSpawn
-  - Padlock1
-  - Padlock2
-  - Padlock3
-  - Padlock4
-  - Padlock5
   - Ground
+  - BarGate
+  - Doors
+  - ChestGate
   layers:
   - Default
   - TransparentFX

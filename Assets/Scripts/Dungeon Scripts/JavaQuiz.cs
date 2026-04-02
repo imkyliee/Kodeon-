@@ -12,7 +12,7 @@ public class JavaQuiz : MonoBehaviour
     public GameObject QA;
 
     [Header("Padlock Reference")]
-    public PadlockQ padlockQ;   // <<— Added this
+    //public PadlockQ padlockQ;   // <<— Added this
 
     [Header("JDK Settings")]
     public string jdkStreamingAssetsPath = "JDK8/jdk8u472-lite"; // Relative to StreamingAssets
@@ -66,7 +66,7 @@ public class JavaQuiz : MonoBehaviour
             Debug.Log("PASS!");
 
             // Use PadlockQ to properly unlock and close panel
-            padlockQ.ClosePanel();            // <<— This fixes the freeze!
+            //padlockQ.ClosePanel();            // <<— This fixes the freeze!
 
             // Hide the compiler UI
             QA.SetActive(false);

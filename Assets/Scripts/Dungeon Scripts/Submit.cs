@@ -8,8 +8,8 @@ public class Submit : MonoBehaviour
     public GameObject Padlock;             // Padlock object in the scene
     public GameObject PadlockUnlockText;   // The "Press [E] to Unlock" UI
     public MonoBehaviour PlayerMovement;   // Player movement script
-    public PadlockQ padlockScript;         // Reference to PadlockQ
-    public GameObject DoorUI;              // Door UI panel
+   // public PadlockQ padlockScript;         // Reference to PadlockQ
+    //public GameObject DoorUI;              // Door UI panel
 
     public void CloseUI()
     {
@@ -30,12 +30,12 @@ public class Submit : MonoBehaviour
             PlayerMovement.enabled = true;
 
         // Unlock the padlock so the door can now be interacted with
-        if (padlockScript != null)
+        /*if (padlockScript != null)
             padlockScript.UnlockPadlock();
 
         // Show the Door UI
         if (DoorUI != null)
-            DoorUI.SetActive(true);
+            DoorUI.SetActive(true);*/
 
         // Restore cursor state
         Cursor.visible = false;
