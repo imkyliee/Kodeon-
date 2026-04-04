@@ -43,7 +43,7 @@ public class Movement : MonoBehaviour
         }
     void Move()
         {
-    Vector3 currentVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
+    Vector3 currentVelocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
 
     Vector3 targetVelocity = new Vector3(move.x, 0, move.y) * speed;
     targetVelocity = transform.TransformDirection(targetVelocity);

@@ -7,8 +7,13 @@ TagManager:
   - Pickup
   - Ground
   - BarGate
-  - Doors
   - ChestGate
+  - Window1
+  - Window2
+  - Window3
+  - Window4
+  - Window5
+  - Door1
   layers:
   - Default
   - TransparentFX
