@@ -4,9 +4,10 @@ using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour
 {
     public GameObject pauseMenuUI;
-    public GameObject[] HUD_UI;
-    public MonoBehaviour[] disableOnPause;
     public SceneTransition transition;
+    public GameObject[] HUD;
+    public MonoBehaviour[] disableOnPause;
+  
     bool isPaused;
     public static PauseManager Instance;
 
@@ -31,7 +32,7 @@ public void Pause()
     isPaused = true;
 
     // Hide HUD
-    foreach (var UI in HUD_UI)
+    foreach (var UI in HUD)
     {
         UI.SetActive(false);
     }
@@ -51,7 +52,7 @@ public void Resume()
     isPaused = false;
 
     // Show HUD
-    foreach (var UI in HUD_UI)
+    foreach (var UI in HUD)
     {
         UI.SetActive(true);
     }
@@ -76,7 +77,7 @@ public void Resume()
 
         if(transition != null)
         {
-            transition.OnButtonPressed();
+            transition.OnButtonPressed("Main Menu");
         }
     }
 

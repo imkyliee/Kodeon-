@@ -7,30 +7,17 @@ public class SceneTransition : MonoBehaviour
     public Animator transitionAnimator;
     public float transitionTime;
 
-    private bool hasTransitioned = false;
-
-    public void OnButtonPressed()
+    public void OnButtonPressed(string scene)
     {
-        if (!hasTransitioned)
-        {
-            hasTransitioned = true;
-            Transition();
-        }
+        StartCoroutine(LoadScene(scene));
     }
 
-    public void Transition()
-    {
-        StartCoroutine(LoadMainMenu());
-    }
-
-    IEnumerator LoadMainMenu()
+    IEnumerator LoadScene(string scene)
     {
         transitionAnimator.SetTrigger("Start");
 
         yield return new WaitForSecondsRealtime(transitionTime);
 
-        Time.timeScale = 1f; // Ensure time scale is reset before loading the scene
-
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene(scene);
     }
 }
